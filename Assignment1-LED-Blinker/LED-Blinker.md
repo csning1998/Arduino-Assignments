@@ -4,7 +4,13 @@
 
 ## 1. Hardware Circuit Diagram
 
-*(Note: Circuit diagram not included in the document)*
+We use 5 LEDs (3 red and 2 green) and connect the circuit as shown below:
+
+![The circuit diagram for this assignment.](./LED-Blinker-Diagram.png)
+
+You may find the simulation here:
+
+https://www.tinkercad.com/things/3hiZZPZFm4E-assignment1blinker?sharecode=Ol-TbCMqwtKctloGhUAw2eCyN5i-RfI7IzfyZkhdQOQ
 
 ---
 
