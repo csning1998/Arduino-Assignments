@@ -1,15 +1,21 @@
-#include <LiquidCrystal.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
 
 // Define the Pin Node
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+LiquidCrystal_I2C lcd(0x27,16,2);
 
 const int redLED = 6;
 const int yellowLED = 7;
 const int greenLED = 8;
 const int buzzer = 9;
 
+
 void setup() {
   // Initialize the LED and Buzzer to be ready for O/P
+  Serial.begin(9600);
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(0, 0);
   pinMode(redLED, OUTPUT);
   pinMode(yellowLED, OUTPUT);
   pinMode(greenLED, OUTPUT);
@@ -17,13 +23,15 @@ void setup() {
 
   lcd.begin(16, 2);
   lcd.clear();
-
-  Serial.begin(9600);
+  lcd.print("Hello World!");
 }
 
 void loop() {
   if(Serial.available() > 0){
     char input = Serial.read();
+    if(input == '\n' || input == '\r') {
+      return;
+    }
     input = toupper(input);
     inputHandler(input);
   }
@@ -41,6 +49,7 @@ void outputInitializer(){
 
 void inputHandler(char input){
   outputInitializer();
+  Serial.print("Input_char is "); Serial.println(input);
 
   switch (input) {
     case 'C':
@@ -65,9 +74,9 @@ void inputHandler(char input){
     case 'G':
       digitalWrite(greenLED, HIGH);
       lcd.print("GREEN ON");
-       for (int i = 0; i < 5; i++){
-        tone(buzzer, 1000, 200);
-        delay(3000);
+      for (int i = 0; i < 5; i++) {
+        tone(buzzer, 1000, 200);  
+        delay(3000); 
       }
       noTone(buzzer);
       break;
