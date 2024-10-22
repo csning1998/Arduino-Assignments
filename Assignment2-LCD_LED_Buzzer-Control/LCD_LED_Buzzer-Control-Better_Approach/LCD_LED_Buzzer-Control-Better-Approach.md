@@ -35,7 +35,7 @@ const int BUZZER = 9;
 
 The curcuit diagram of this implementation is shown below. 
 
-(pic here)
+![Circuit Diagram corresponding to this program](https://raw.githubusercontent.com/csning1998/Arduino-Assignments/refs/heads/main/Assignment2-LCD_LED_Buzzer-Control/LCD_LED_Buzzer-Control-Better_Approach/Circuit_Diagram.png "Circuit Diagram corresponding to this program")
 
 Additionally, we will define several parameters that are used by the circuit components:
 
@@ -278,6 +278,10 @@ void loop() {
   }
 }
 ```
+
+### Video Demostration
+
+https://drive.google.com/file/d/154WCeubZRZMpK3TZCdryNwx0p4G5TwuM/view?usp=drive_link
 
 ## Conclusion
 
