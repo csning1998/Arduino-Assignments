@@ -8,6 +8,12 @@ This project demonstrates the control of an Arduino system utilizing LEDs, an I2
 
 Refer to the table below for the expected output of the buzzer, LCD, and LED based on user input values.
 
+| Input Value | LED | LCD | Buzzer |
+|-------------|-----|-----|--------|
+| C (c)       | All LEDs off | All content cleared | No sound |
+| R (r)       | Only the red LED stays on | First row displays "RED ON" | Continuous sound |
+| Y (y)       | Only the yellow LED stays on | First row displays "YELLOW ON" | Intermittent sound, 1-second intervals |
+| G (g)       | Only the green LED stays on | First row displays "GREEN ON" | Intermittent sound, 3-second intervals |
 
 ## Preparation
 
