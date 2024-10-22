@@ -37,6 +37,8 @@ The curcuit diagram of this implementation is shown below.
 
 ![Circuit Diagram corresponding to this program](https://raw.githubusercontent.com/csning1998/Arduino-Assignments/refs/heads/main/Assignment2-LCD_LED_Buzzer-Control/LCD_LED_Buzzer-Control-Better_Approach/Circuit_Diagram.png "Circuit Diagram corresponding to this program")
 
+Reference: https://www.tinkercad.com/things/5rIyDSxOSNt-assignment2-lcdledbuzzer?sharecode=CIG4u1ELGAVlzIMVaE91icyVWZxpKHHCOTl0qU4CiQc
+
 Additionally, we will define several parameters that are used by the circuit components:
 
 ```cpp
